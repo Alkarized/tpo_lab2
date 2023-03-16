@@ -9,6 +9,7 @@
 ![func](./resources/func.png)
 
 x <= 0 : (((((sec(x) / cot(x)) ^ 2) ^ 2) * (((sec(x) + cos(x)) + tan(x)) / csc(x))) / csc(x))
+
 x > 0 : (((((log_3(x) ^ 2) - log_2(x)) / log_10(x)) ^ 2) ^ 2)
 
 ## Правила выполнения работы:
