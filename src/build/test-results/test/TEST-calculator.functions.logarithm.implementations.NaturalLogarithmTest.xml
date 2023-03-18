@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="calculator.functions.logarithm.implementations.NaturalLogarithmTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2023-03-18T20:39:57" hostname="LAPTOP-2LBS2LJ1" time="0.025">
+  <properties/>
+  <testcase name="[1] -0.5" classname="calculator.functions.logarithm.implementations.NaturalLogarithmTest" time="0.002"/>
+  <testcase name="[2] 0.0" classname="calculator.functions.logarithm.implementations.NaturalLogarithmTest" time="0.001"/>
+  <testcase name="[3] 2.0" classname="calculator.functions.logarithm.implementations.NaturalLogarithmTest" time="0.001"/>
+  <testcase name="[1] 0.01" classname="calculator.functions.logarithm.implementations.NaturalLogarithmTest" time="0.001"/>
+  <testcase name="[2] 0.1" classname="calculator.functions.logarithm.implementations.NaturalLogarithmTest" time="0.001"/>
+  <testcase name="[3] 0.5" classname="calculator.functions.logarithm.implementations.NaturalLogarithmTest" time="0.001"/>
+  <testcase name="[4] 1.0" classname="calculator.functions.logarithm.implementations.NaturalLogarithmTest" time="0.001"/>
+  <testcase name="[5] 1.1" classname="calculator.functions.logarithm.implementations.NaturalLogarithmTest" time="0.001"/>
+  <testcase name="[6] 1.5" classname="calculator.functions.logarithm.implementations.NaturalLogarithmTest" time="0.001"/>
+  <testcase name="[7] 1.9" classname="calculator.functions.logarithm.implementations.NaturalLogarithmTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
