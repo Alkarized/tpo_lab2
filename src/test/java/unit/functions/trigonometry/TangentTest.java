@@ -1,7 +1,7 @@
 package unit.functions.trigonometry;
 
-import calculator.functions.trigonometry.dummies.CosineDummy;
-import calculator.functions.trigonometry.dummies.SineDummy;
+import dummies.CosineDummy;
+import dummies.SineDummy;
 import calculator.functions.trigonometry.implementations.TangentImp;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -16,6 +16,8 @@ class TangentTest {
     static void setupAll() {
         final SineDummy sineDummy = new SineDummy();
         tangentImp = new TangentImp(sineDummy, new CosineDummy(sineDummy));
+        tangentImp.setToLog(true);
+
         d = 0.001;
     }
 

@@ -1,7 +1,7 @@
 package unit.functions.trigonometry;
 
-import calculator.functions.trigonometry.dummies.CosineDummy;
-import calculator.functions.trigonometry.dummies.SineDummy;
+import dummies.CosineDummy;
+import dummies.SineDummy;
 import calculator.functions.trigonometry.implementations.CotangentImp;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -17,10 +17,11 @@ class CotangentTest {
     static void setupAll() {
         final SineDummy sineDummy = new SineDummy();
         cotangentImp = new CotangentImp(sineDummy, new CosineDummy(sineDummy));
+        cotangentImp.setToLog(true);
+
         d = 0.001;
     }
 
-    // Тут как и у синуса ограничение на pi * n
 
     @ParameterizedTest
     @ValueSource(doubles = {-2.889, -2, -1.57, -1, -0.254, 0.254, 1, 1.57, 2, 2.889})

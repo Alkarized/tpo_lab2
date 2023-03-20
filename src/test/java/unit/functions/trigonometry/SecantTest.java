@@ -1,7 +1,7 @@
 package unit.functions.trigonometry;
 
-import calculator.functions.trigonometry.dummies.CosineDummy;
-import calculator.functions.trigonometry.dummies.SineDummy;
+import dummies.CosineDummy;
+import dummies.SineDummy;
 import calculator.functions.trigonometry.implementations.SecantImp;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -16,10 +16,11 @@ class SecantTest {
     @BeforeAll
     static void setupAll() {
         secantImp = new SecantImp(new CosineDummy(new SineDummy()));
+        secantImp.setToLog(true);
+
         d = 0.001;
     }
 
-    // Ограничения на cos != 0 -> x != Pi/2 + pi * n
 
     @ParameterizedTest
     @ValueSource(doubles = {-Math.PI, -Math.PI - 0.1, -Math.PI + 0.1, -Math.PI/2 + 0.1, -Math.PI/2 - 0.1, 0, 0.1, -0.1,

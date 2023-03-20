@@ -1,9 +1,7 @@
 package unit.functions;
 
 import calculator.Calculator;
-import calculator.functions.logarithm.dummies.LogarithmDummy;
-import calculator.functions.logarithm.dummies.NaturalLogarithmDummy;
-import calculator.functions.trigonometry.dummies.*;
+import dummies.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -35,13 +33,6 @@ class CalculatorTest {
         calculator.setToLog(true);
         d = 0.001;
     }
-
-    // Тут по графику примерно видно такие моменты: у нас функция эквивалентна y = 0, y = kx + b, где  А так же дуги соединяющие y = 0 и y = kx + b
-    // при этом у нас симметрия есть, k - ну ооочень маленький коэф,
-    // 1 -> NaN
-    // pi/2 + pi*k = 0
-    //(Симметрия ) (-3pi/2 -> -3.8)(-3.8 -> -3.47)(-3.47 -> -2.81),(-2.81 -> -pi/2 ) | (-pi/2 -> -0.66), (-0.66 -> -0.33), (-0.33 -> 0), (0 -> 1) | (1 -> 1.5), (1.5 -> 2.5), (2.5 -> 4.3), (4.3 -> 6.8), (6.8 -> 12) (12 -> +inf)
-
 
     @ParameterizedTest
     @CsvSource(value = {"-4.61238898038469;-1.975031612557273E9",

@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.logging.Logger;
 
 public class NaturalLogarithmImp {
 
@@ -32,8 +31,7 @@ public class NaturalLogarithmImp {
                 writer.write(x + ";ln;" + result + "\n");
                 writer.flush();
 
-            } catch (IOException e) {
-                Logger.getLogger(NaturalLogarithmImp.class.getName()).fine("Could not log: IOException");
+            } catch (IOException ignored) {
             }
         }
         return result;

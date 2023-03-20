@@ -14,6 +14,8 @@ class NaturalLogarithmTest {
     @BeforeAll
     static void setupAll() {
         naturalLogarithmImp = new NaturalLogarithmImp();
+        naturalLogarithmImp.setToLog(true);
+
         d = 0.001;
     }
 

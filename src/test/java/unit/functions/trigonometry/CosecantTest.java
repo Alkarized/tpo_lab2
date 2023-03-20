@@ -1,6 +1,6 @@
 package unit.functions.trigonometry;
 
-import calculator.functions.trigonometry.dummies.SineDummy;
+import dummies.SineDummy;
 import calculator.functions.trigonometry.implementations.CosecantImp;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -16,12 +16,12 @@ class CosecantTest {
     @BeforeAll
     static void setupAll() {
         cosecantImp = new CosecantImp(new SineDummy());
+        cosecantImp.setToLog(true);
+
         d = 0.001;
     }
 
-    // Ограничение в sin != 0, а это x = pi * n, n - целое число. (0, pi, -pi, 2pi, -2pi);
 
-    // (0 -> 0.254), (0.254 -> pi/2), (pi/2 -> 2.889) и для минуса / дальше повторение
     @ParameterizedTest
     @ValueSource(doubles = {-2.889, -2, -1.57, -1, -0.254, 0.254, 1, 1.57, 2, 2.889})
     void testCosecantValidInput(final double value) {

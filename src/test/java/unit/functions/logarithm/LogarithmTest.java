@@ -1,6 +1,6 @@
 package unit.functions.logarithm;
 
-import calculator.functions.logarithm.dummies.NaturalLogarithmDummy;
+import dummies.NaturalLogarithmDummy;
 import calculator.functions.logarithm.implementations.LogarithmImp;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -17,6 +17,7 @@ class LogarithmTest {
     @BeforeAll
     static void setupAll() {
         logarithmImp = new LogarithmImp(new NaturalLogarithmDummy());
+        logarithmImp.setToLog(true);
         d = 0.001;
         bases = new double[]{2, 3, 10};
     }

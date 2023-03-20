@@ -14,9 +14,10 @@ class SineTest {
     @BeforeAll
     static void setupAll() {
         sineImp = new SineImp();
+        sineImp.setToLog(true);
+
         d = 0.001;
     }
-    // Нет ограничения
     @ParameterizedTest
     @ValueSource(doubles = {0, 0.1, 0.5, 1, Math.PI / 2, Math.PI, Math.PI * 1.5, Math.PI * 2
             -0.1, -0.5, -1, -Math.PI / 2, -Math.PI, -Math.PI * 1.5, -Math.PI * 2})

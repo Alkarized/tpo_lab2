@@ -1,6 +1,6 @@
 package unit.functions.trigonometry;
 
-import calculator.functions.trigonometry.dummies.SineDummy;
+import dummies.SineDummy;
 import calculator.functions.trigonometry.implementations.CosineImp;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -15,10 +15,11 @@ class CosineTest {
     @BeforeAll
     static void setupAll() {
         cosineImp = new CosineImp(new SineDummy());
+        cosineImp.setToLog(true);
+
         d = 0.001;
     }
 
-    // Нет ограничений
 
     @ParameterizedTest
     @ValueSource(doubles = {0, 0.1, 0.5, 1, Math.PI / 2, Math.PI, Math.PI * 1.5,

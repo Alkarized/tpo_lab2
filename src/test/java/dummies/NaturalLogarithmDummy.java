@@ -1,4 +1,4 @@
-package calculator.functions.logarithm.dummies;
+package dummies;
 
 import calculator.functions.logarithm.implementations.NaturalLogarithmImp;
 
