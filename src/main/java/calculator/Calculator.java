@@ -13,12 +13,12 @@ import java.util.logging.Logger;
 public class Calculator {
 
     private boolean toLog;
-    private CosineImp cosineImp;
-    private SecantImp secantImp;
-    private CosecantImp cosecantImp;
-    private TangentImp tangentImp;
-    private CotangentImp cotangentImp;
-    private LogarithmImp logarithmImp;
+    final private CosineImp cosineImp;
+    final private SecantImp secantImp;
+    final private CosecantImp cosecantImp;
+    final private TangentImp tangentImp;
+    final private CotangentImp cotangentImp;
+    final private LogarithmImp logarithmImp;
 
     public Calculator(final CosineImp cosineImp, final SecantImp secantImp, final CosecantImp cosecantImp, final TangentImp tangentImp, final CotangentImp cotangentImp, final LogarithmImp logarithmImp) {
         this.cosecantImp = cosecantImp;
@@ -53,27 +53,4 @@ public class Calculator {
         return result;
     }
 
-    public void setCosecantImp(final CosecantImp cosecantImp) {
-        this.cosecantImp = cosecantImp;
-    }
-
-    public void setCosineImp(final CosineImp cosineImp) {
-        this.cosineImp = cosineImp;
-    }
-
-    public void setCotangentImp(final CotangentImp cotangentImp) {
-        this.cotangentImp = cotangentImp;
-    }
-
-    public void setLogarithmImp(final LogarithmImp logarithmImp) {
-        this.logarithmImp = logarithmImp;
-    }
-
-    public void setSecantImp(final SecantImp secantImp) {
-        this.secantImp = secantImp;
-    }
-
-    public void setTangentImp(final TangentImp tangentImp) {
-        this.tangentImp = tangentImp;
-    }
 }
