@@ -1,0 +1,29 @@
+package calculator.functions.trigonometry.dummies;
+
+import calculator.functions.trigonometry.implementations.SineImp;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.logging.Logger;
+
+public class SineDummy extends SineImp {
+
+    @Override
+    public double sin(final double x, final double d) {
+        final double result = Math.sin(x);
+        if (toLog) {
+            try (BufferedWriter writer = Files.newBufferedWriter(Paths.get("log.csv"), StandardOpenOption.WRITE, StandardOpenOption.APPEND)) {
+
+                writer.write(x + ";sinD;" + result + "\n");
+                writer.flush();
+
+            } catch (IOException e) {
+                Logger.getLogger(SineDummy.class.getName()).fine("Could not log: IOException");
+            }
+        }
+        return result;
+    }
+}
