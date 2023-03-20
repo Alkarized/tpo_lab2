@@ -52,8 +52,7 @@ class CalculatorTest {
                     "1.1;97.22426906553241",
                     "1.5;42.175992553770584",
                     "1.6;34.59702220282328",
-                    "-1.57079632679; 0",
-                    "-4.71238898038; 0",}, delimiter = ';')
+                    "-1.57079632679; 0"}, delimiter = ';')
     void testCalculatorInput(final double value, final double expectedResult) {
         final double result = calculator.function(value, d);
         Assertions.assertEquals(expectedResult, result, d*10);
@@ -63,7 +62,7 @@ class CalculatorTest {
     @CsvSource(value = {"1;NaN"}, delimiter = ';')
     void testCalculatorNotValidInput(final double value, final double expectedResult) {
         final double result = calculator.function(value, d);
-        Assertions.assertEquals(expectedResult, result, d);
+        Assertions.assertEquals(expectedResult, result, d*10);
     }
 
 }

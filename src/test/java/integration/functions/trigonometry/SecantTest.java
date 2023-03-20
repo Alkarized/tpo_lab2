@@ -25,7 +25,7 @@ class SecantTest {
     void testCosecantValidInput(final double value) {
         final double result = secantImp.sec(value, d);
         final double expectedResult = 1 / Math.cos(value);
-        Assertions.assertTrue(Math.abs(result - expectedResult) <= d*10);
+        Assertions.assertEquals(expectedResult, result, d*10);
     }
 
     @ParameterizedTest

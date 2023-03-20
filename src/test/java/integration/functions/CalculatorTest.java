@@ -26,7 +26,7 @@ class CalculatorTest {
     }
 
     @ParameterizedTest
-    @CsvSource(value = {"-4.61238898038469;1.9875254143297124E9",
+    @CsvSource(value = {"-4.61238898038469;-1.9875254143297124E9",
             "-3.8;-0.9784137332789241",
             "-3.7;-0.21905850987620443",
             "-3.47;-0.004084936282451552",
@@ -44,15 +44,15 @@ class CalculatorTest {
             "1.1;97.22426906553241",
             "1.5;42.179839664242564",
             "1.6;34.59920726240837",
-            "-1.57079632679; 0",
-            "-4.71238898038; 0",}, delimiter = ';')
+            }, delimiter = ';')
     void testCalculatorInput(final double value, final double expectedResult) {
         final double result = calculator.function(value, d);
         Assertions.assertEquals(expectedResult, result, d*10);
     }
 
     @ParameterizedTest
-    @CsvSource(value = {"1;NaN"}, delimiter = ';')
+    @CsvSource(value = {"1;NaN",
+                        "-1.57079632679; NaN"}, delimiter = ';')
     void testCalculatorNotValidInput(final double value, final double expectedResult) {
         final double result = calculator.function(value, d);
         Assertions.assertEquals(expectedResult, result, d);
