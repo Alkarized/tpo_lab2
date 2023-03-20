@@ -16,13 +16,23 @@ class CalculatorTest {
     @BeforeAll
     static void setupAll() {
         final SineDummy sineDummy = new SineDummy();
+        sineDummy.setToLog(true);
         final CosineDummy cosineDummy = new CosineDummy(sineDummy);
+        cosineDummy.setToLog(true);
         final SecantDummy secantDummy = new SecantDummy(cosineDummy);
+        secantDummy.setToLog(true);
         final CosecantDummy cosecantDummy = new CosecantDummy(sineDummy);
+        cosecantDummy.setToLog(true);
         final TangentDummy tangentDummy = new TangentDummy(sineDummy, cosineDummy);
+        tangentDummy.setToLog(true);
         final CotangentDummy cotangentDummy = new CotangentDummy(sineDummy, cosineDummy);
-        final LogarithmDummy logarithmDummy = new LogarithmDummy(new NaturalLogarithmDummy());
+        cotangentDummy.setToLog(true);
+        final NaturalLogarithmDummy naturalLogarithmDummy = new NaturalLogarithmDummy();
+        naturalLogarithmDummy.setToLog(true);
+        final LogarithmDummy logarithmDummy = new LogarithmDummy(naturalLogarithmDummy);
+        logarithmDummy.setToLog(true);
         calculator = new Calculator(cosineDummy, secantDummy, cosecantDummy, tangentDummy, cotangentDummy, logarithmDummy);
+        calculator.setToLog(true);
         d = 0.001;
     }
 

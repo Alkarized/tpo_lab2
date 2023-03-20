@@ -15,12 +15,21 @@ class CalculatorTest {
     @BeforeAll
     static void setupAll() {
         final SineImp sineImp = new SineImp();
+        sineImp.setToLog(true);
         final CosineImp cosineImp = new CosineImp(sineImp);
+        cosineImp.setToLog(true);
         final SecantImp secantImp = new SecantImp(cosineImp);
+        secantImp.setToLog(true);
         final CosecantImp cosecantImp = new CosecantImp(sineImp);
+        cosecantImp.setToLog(true);
         final TangentImp tangentImp = new TangentImp(sineImp, cosineImp);
+        tangentImp.setToLog(true);
         final CotangentImp cotangentImp = new CotangentImp(sineImp, cosineImp);
-        final LogarithmImp logarithmImp = new LogarithmImp(new NaturalLogarithmImp());
+        cotangentImp.setToLog(true);
+        final NaturalLogarithmImp naturalLogarithmImp = new NaturalLogarithmImp();
+        naturalLogarithmImp.setToLog(true);
+        final LogarithmImp logarithmImp = new LogarithmImp(naturalLogarithmImp);
+        logarithmImp.setToLog(true);
         calculator = new Calculator(cosineImp, secantImp, cosecantImp, tangentImp, cotangentImp, logarithmImp);
         d = 0.001;
     }
